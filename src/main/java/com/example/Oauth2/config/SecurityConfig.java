@@ -69,7 +69,7 @@ public class SecurityConfig {
 
                 //authorizeHttpRequests 메서드는 AuthorizeHttpRequestsConfigurer 객체(authorize)를 인자로 받는 람다식을 필요로 합니다.
                 .authorizeHttpRequests(authorize -> authorize // 요청에 대한 인증 절차 AuthorizeHttpRequestsConfigurer 타입의 객체로, HTTP 요청에 대한 인증 및 인가 규칙을 추가하는 데 사용됩니다.
-                        .requestMatchers("/home","/","/h2-console/**","/banner/**").permitAll() // 해당 URL은 인증 절차 없이 접근 가능
+                        .requestMatchers("/home","/","/h2-console/**","/banner/**","/create").permitAll() // 해당 URL은 인증 절차 없이 접근 가능
                         .anyRequest().authenticated() // 그 외의 요청은 인증 필요
                 )
                 //https://akira6036.tistory.com/72 헤더 설정 이유확인

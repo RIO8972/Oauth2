@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/header :: header">
+</head>
+<body>
+    <nav th:replace="layouts/navbar :: navbar"></nav>
+        <table th:replace="articles/crud/articleform :: articleform"></table>
+    <footer th:replace="layouts/footer :: footer"></footer>
+    <script src="/js/create.js"></script>
+</body>
+</html>

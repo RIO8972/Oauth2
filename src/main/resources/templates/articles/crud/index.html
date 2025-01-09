@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/header :: header">
+<body>
+    <nav th:replace="layouts/navbar :: navbar"></nav>
+        <table class="container">
+            <thead>
+                <tr>
+                    <td>title</td> <td>content</td>
+                </tr>
+            </thead>
+            <tr th:each="article : ${articles}">
+                <td th:text="${article.title}"></td>
+                <td th:text="${article.content}"></td>
+            </tr>
+        </table>
+    <footer th:replace="layouts/footer :: footer"></footer>
+</body>
+</html>
